@@ -17,6 +17,11 @@ function Article({article}) {
         <section>
             <p>{article.description}</p>
         </section>
+
+        <footer>
+        <p>{article.source}</p>
+        <p>{article.published_at}</p>
+        </footer>
         </div>
     </div>
   </article>
