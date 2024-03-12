@@ -9,7 +9,7 @@ async function Homepage() {
   // fetch the news data
   const news = sortNewsByImage(response) //|| await fetchNews(categories.join(','))
 
-  console.log(news)
+  //console.log(news)
 
   return (
     <div> 
