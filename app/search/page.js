@@ -1,4 +1,4 @@
-import fetchNews from "@/lib/fetchNews"
+import fetchNews from "@/lib/fetchNews";
 import NewsList from "../NewsList";
 
 async function SearchPage({searchParams}) {
@@ -18,4 +18,4 @@ async function SearchPage({searchParams}) {
   )
 }
 
-export default SearchPage
+export default SearchPage;
