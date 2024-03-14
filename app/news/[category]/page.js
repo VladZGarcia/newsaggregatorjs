@@ -5,7 +5,7 @@ import { categories } from '@/constants'
 
 async function NewsCategory(props) {
     const { category } = props.params
-    const news = await fetchNews(category, category, true);
+    const news = await fetchNews(categories.join(','), category, true);
     //console.log(news)
   return (
     <div> 
