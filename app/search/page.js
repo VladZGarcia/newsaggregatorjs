@@ -1,9 +1,10 @@
 import fetchNews from "@/lib/fetchNews";
 import NewsList from "../NewsList";
+import { categories } from '@/constants'
 
 async function SearchPage({searchParams}) {
     const news = await fetchNews(
-        "general",
+        categories.join(','),
         searchParams?.term,
         true
     );
