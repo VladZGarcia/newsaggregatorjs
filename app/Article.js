@@ -3,7 +3,7 @@ import ReadMoreButton from './ReadMoreButton';
 
 function Article({ article }) {
   return (
-    // <a href={article.url} className="block">
+     <a href={article.url} className="block">
       <article className="bg-slate-100 dark:bg-slate-800 flex flex-col rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:bg-slate-200 transition-all duration-200 ease-out">
         {article.image && (
           <img
@@ -31,7 +31,7 @@ function Article({ article }) {
           {/* <button className="bg-orange-400 h-10 rounded-b-lg dark:text-gray-900 hover:bg-orange-500">Leer más</button> */}
         </div>
       </article>
-    // </a>
+     </a>
   );
 }
 
