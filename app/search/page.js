@@ -1,13 +1,16 @@
 import fetchNews from "@/lib/fetchNews";
 import NewsList from "../NewsList";
 import { categories } from '@/constants'
+import sortNewsByImage from '@/lib/sortNewsByImage'
+import response from '@/response.json'
 
 async function SearchPage({searchParams}) {
-    const news = await fetchNews(
-        categories.join(','),
-        searchParams?.term,
-        true
-    );
+    const news = sortNewsByImage(response)
+    // await fetchNews(
+    //     categories.join(','),
+    //     searchParams?.term,
+    //     true
+    // );
 //console.log(news)
   return (
     <div>

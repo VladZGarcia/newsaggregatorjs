@@ -1,12 +1,15 @@
 import NewsList from '@/app/NewsList';
 import fetchNews from '@/lib/fetchNews';
 import { categories } from '@/constants'
+import sortNewsByImage from '@/lib/sortNewsByImage'
+import response from '@/response.json'
 
 
 async function NewsCategory(props) {
     const { category } = props.params
     //MediaStack seems to have problem with their categories so we made it like a searchterm.
-    const news = await fetchNews(categories.join(','), category, true);
+    const news = sortNewsByImage(response)
+    //await fetchNews(categories.join(','), category, true);
     //console.log(news)
   return (
     <div> 
