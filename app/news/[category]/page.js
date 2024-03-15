@@ -5,6 +5,7 @@ import { categories } from '@/constants'
 
 async function NewsCategory(props) {
     const { category } = props.params
+    //MediaStack seems to have problem with their categories so we made it like a searchterm.
     const news = await fetchNews(categories.join(','), category, true);
     //console.log(news)
   return (
@@ -16,3 +17,9 @@ async function NewsCategory(props) {
 }
 
 export default NewsCategory;
+
+export async function generateStaticParams() {
+  return categories.map((category) => ({
+    category: category,
+  }));
+}
