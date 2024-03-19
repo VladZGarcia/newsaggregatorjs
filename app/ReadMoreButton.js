@@ -7,12 +7,14 @@ const { useRouter } = require("next/navigation");
 function ReadMoreButton({article}){
     const router = useRouter();
 
+    const querystring = require('querystring');
+
     const handleClick = () => {
         // const queryString = Object.entries(article)
         //     .map(([key, value])=> `${key}=${value}`)
         //     .join("&");
-        const params = new URLSearchParams(article);
-            const url = `/article?${params.toString()}`;
+        const queryString = querystring.stringify(article);
+            const url = `/article?${queryString}`;
             console.log(url)
                 router.push(url);
     }
