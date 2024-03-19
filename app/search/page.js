@@ -5,12 +5,12 @@ import sortNewsByImage from '@/lib/sortNewsByImage'
 import response from '@/response.json'
 
 async function SearchPage({searchParams}) {
-    const news = sortNewsByImage(response)
-    // await fetchNews(
-    //     categories.join(','),
-    //     searchParams?.term,
-    //     true
-    // );
+    const news = await fetchNews(
+        categories.join(','),
+        searchParams?.term,
+        true
+    );
+    //sortNewsByImage(response)
 //console.log(news)
   return (
     <div>
