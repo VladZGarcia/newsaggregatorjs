@@ -8,9 +8,12 @@ import response from '@/response.json'
 async function NewsCategory(props) {
     const { category } = props.params
     //MediaStack seems to have problem with their categories so we made it like a searchterm.
-    const news = sortNewsByImage(response)
+    const news = await fetchNews(categories.join(','), category, true);
     //await fetchNews(categories.join(','), category, true);
     //console.log(news)
+    //to not use up the api use the response.json
+    //sortNewsByImage(response)
+
   return (
     <div> 
         <h1 className="headerTitle">{category}</h1>
