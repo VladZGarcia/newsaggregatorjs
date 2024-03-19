@@ -14,9 +14,10 @@ function ReadMoreButton({article}){
         //     .map(([key, value])=> `${key}=${value}`)
         //     .join("&");
         const queryString = querystring.stringify(article);
-            const url = `/article?${queryString}`;
-            console.log(url)
-                router.push(url);
+        console.log(queryString)
+        const url = `/article?${queryString}`;
+        console.log(url)
+            router.push(url);
     }
 
     return (
