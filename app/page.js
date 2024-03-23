@@ -7,9 +7,9 @@ import sortNewsByImage from '@/lib/sortNewsByImage'
 
 async function Homepage() {
   // fetch the news data
-  const news =  sortNewsByImage(response)
+  //const news =  sortNewsByImage(response)
+  const news = await fetchNews(categories.join(","));
   
-
   //to not use up the api use the response.json
   //const news = sortNewsByImage(response)
   //console.log(news)

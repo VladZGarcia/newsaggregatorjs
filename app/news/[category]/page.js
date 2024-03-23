@@ -9,12 +9,10 @@ async function NewsCategory(props) {
     const { category } = props.params
     //MediaStack seems to have problem with their categories so we made it like a searchterm.
     
-    //const news = await fetchNews(categories.join(','), category, true);
-    
-    
+    const news = await fetchNews(categories.join(','), category, true);
 
     //to not use up the api use the response.json
-    const news = sortNewsByImage(response)
+    //const news = sortNewsByImage(response)
 
   return (
     <div> 
