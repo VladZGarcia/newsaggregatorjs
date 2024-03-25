@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project Presentation: News Aggregator with Sympathy Control
+Introduction
 
-## Getting Started
+    Purpose: Develop a news aggregator capable of gathering news articles from various sources and conducting a sympathy control to display the text's bias and sympathy.
+    Background: With the increasing amount of information online, it's crucial for users to access news in an objective manner and be aware of any biases in news reporting.
+    Goal: Create a platform that provides users with access to a variety of news perspectives while making them aware of potential biases.
 
-First, run the development server:
+System Architecture
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    Data Collection:
+        Utilization of web scraping to gather news articles from different sources and news websites.
+    Sympathy Control:
+        Employing natural language processing (NLP) and machine learning to analyze the texts of news articles.
+        Developing algorithms to measure bias and sympathy in the text based on keywords, tone, and other contextual information.
+    User Interface:
+        Designing a user-friendly web application where users can search for news and view sympathy control results.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sympathy Control Methodology
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+    Text Analysis:
+        Identification of keywords and phrases that may indicate bias or sympathy in the text.
+        Analysis of tone and linguistic style to assess the news article's objectivity.
+    Machine Learning:
+        Training machine learning models using labeled datasets to automatically classify news articles according to their sympathy and bias.
+        Continuous improvement of the models through feedback loops from user interactions.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+User Experience
 
-## Learn More
+    Search and Filtering:
+        Allow users to search for news based on various criteria such as topic, source, and date.
+        Implement filtering options to display news with different levels of sympathy and bias.
+    Visualization of Results:
+        Present sympathy control results in a clear and user-friendly manner, perhaps through color-coding or graphical diagrams.
+        Offer users the ability to obtain more detailed information on why a news article is assessed in a certain way.
 
-To learn more about Next.js, take a look at the following resources:
+Technical Challenges
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Web Scraping and Data Quality: Manage variations in data formats and ensure high quality of collected news articles.
+    NLP and Bias Analysis: Develop accurate algorithms to properly measure bias and sympathy in news texts, despite linguistic nuances and contextual complexity.
+    User Interface Design: Create an intuitive and responsive web application that offers a good user experience and clear communication of sympathy control results.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Conclusions and Future Work
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    Conclusions: Presentation of the project's progress and achieved results compared to the original goals.
+    Future Work: Identification of potential areas for improvement and new features to further enhance the news aggregator and sympathy control.
+    
