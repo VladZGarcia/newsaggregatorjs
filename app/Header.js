@@ -3,6 +3,7 @@ import Link from "next/link";
 import NavLinks from "./NavLinks";
 import SearchBox from "./SearchBox";
 import DarkModeButton from "./DarkModeButton";
+import SideBar from "./SideBar";
 
 function Header() {
   return (
