@@ -7,7 +7,7 @@ import CarouselItem from './CarouselItem'
 import Autoplay from 'embla-carousel-autoplay'
 
 function Carousel({news}) {
-const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true}, [Autoplay({ delay: 1500 })])
+const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true}, [Autoplay({ delay: 3200 })])
 
 useEffect(() => {
   if (emblaApi) {
@@ -16,8 +16,8 @@ useEffect(() => {
 },[emblaApi])
 
   return (
-    <div className="embla mx-auto h-56 mt-12 max-w-screen-lg border" ref={emblaRef}>
-      <div className="embla__container ">
+    <div className="embla mx-auto  mt-12 max-w-screen-lg border" ref={emblaRef}>
+      <div className="embla__container h-auto ">
           {news.data.map((article) => (
           <CarouselItem key={article.title} article={article} />
         ))}
