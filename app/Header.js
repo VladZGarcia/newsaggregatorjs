@@ -15,8 +15,7 @@ function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-
+  
   useEffect(() => {
     const handleResize = () => {
       setIsMediumScreen(window.innerWidth >= 768); // 768px is the medium breakpoint
@@ -45,12 +44,15 @@ useEffect(() => {
 
   return (
     <header>
-        <div className="grid grid-cols-3 md:grid-cols-1 p-10 items-center">
-            {isMenuOpen ? (
+        <div className="grid grid-cols-3  p-10 items-center">
+        <div>
+        {isMenuOpen ? (
               <XMarkIcon className="h-8 w-8 cursor-pointer md:hidden" onClick={toggleMenu} />
             ) : (
               <Bars3Icon className="h-8 w-8 cursor-pointer md:hidden" onClick={toggleMenu} />
             )}
+        </div>
+            
             <Link href='/'>
               <div className="justify-end">
                 <h1 className="font-serif text-4xl text-center">El{" "}
