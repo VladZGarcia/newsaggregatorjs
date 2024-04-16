@@ -7,7 +7,7 @@ import CarouselItem from './CarouselItem'
 import Autoscroll from 'embla-carousel-auto-scroll'
 
 function Carousel({news}) {
-const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true,loop: true}, [Autoscroll({ speed: 2, stopOnMouseEnter: false, stopOnInteraction: false, startDelay: 50 })])
+const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true,loop: true}, [Autoscroll({ speed: 1, stopOnMouseEnter: false, stopOnInteraction: false, startDelay: 50 })])
 
 useEffect(() => {
   if (emblaApi) {
