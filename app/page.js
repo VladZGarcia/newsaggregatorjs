@@ -14,9 +14,6 @@ async function Homepage() {
   //const news = sortNewsByImage(response)
   //console.log(news)
 
-  //to fetch from WordPress
-  //fetch('http://localhost:5000/api/data');
-
   // just to test Loading page.
   //await new Promise((resolve) => setTimeout(resolve, 5000))
 
