@@ -7,3 +7,13 @@ export const categories = [
     "sports",
     "technology",
 ];
+
+export const categorias = [
+    "general",
+    "Negocios",
+    "Entretenimiento",
+    "Salud",
+    "ciencia",
+    "Deporte",
+    "Tecnologia",
+];
