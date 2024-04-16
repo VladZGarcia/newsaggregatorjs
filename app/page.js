@@ -4,10 +4,10 @@ import fetchNews from '../lib/fetchNews'
 import NewsList from './NewsList'
 import response from '../response.json'
 import sortNewsByImage from '@/lib/sortNewsByImage'
+import Carousel from './Carousel'
 
 async function Homepage() {
   // fetch the news data
-  //const news =  sortNewsByImage(response)
   const news = await fetchNews(categories.join(","));
   
   //to not use up the api use the response.json
@@ -19,6 +19,7 @@ async function Homepage() {
 
   return (
     <div> 
+      <Carousel news= {news}/>
       <NewsList news= {news}/>
     </div>
   )

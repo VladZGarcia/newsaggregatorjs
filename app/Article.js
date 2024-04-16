@@ -5,7 +5,7 @@ import LiveTimestamp from './LiveTimestamp';
 function Article({ article }) {
   return (
     // "a" used if to get to the source of the news
-     //<a href={article.url} className="block">
+     <a href={article.url} className="block">
       <article className="bg-slate-100 dark:bg-slate-800 flex flex-col rounded-lg shadow-lg hover:scale-105 hover:shadow-xl hover:bg-slate-200 transition-all duration-200 ease-out">
         {article.image && (
           <img
@@ -25,9 +25,9 @@ function Article({ article }) {
 
             <footer className="text-xs text-right ml-auto flex space-x-1 pt-5 italic text-gray-400">
               <p>{article.source}</p>
-              <p>
+              {/* <p>
                 <LiveTimestamp time={article.published_at}/>
-              </p>
+              </p> */}
             </footer>
           </div>
           {/*ReadMoreButton */}
@@ -35,7 +35,7 @@ function Article({ article }) {
           {/* <button className="bg-orange-400 h-10 rounded-b-lg dark:text-gray-900 hover:bg-orange-500">Leer más</button> */}
         </div>
       </article>
-     //</a>
+     </a>
   );
 }
 
