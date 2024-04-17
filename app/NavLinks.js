@@ -20,7 +20,6 @@ function NavLinks() {
             isActive={isActive(category)}
              />
         ))}
-
     </nav>
   );
 }

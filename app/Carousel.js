@@ -7,7 +7,7 @@ import CarouselItem from './CarouselItem'
 import Autoscroll from 'embla-carousel-auto-scroll'
 
 function Carousel({news}) {
-const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true,loop: true}, [Autoscroll({ speed: 1, stopOnMouseEnter: false, stopOnInteraction: false, startDelay: 50 })])
+const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true,loop: true}, [Autoscroll({ speed: 0.5, stopOnMouseEnter: false, stopOnInteraction: false, startDelay: 50 })])
 
 useEffect(() => {
   if (emblaApi) {
@@ -18,7 +18,7 @@ useEffect(() => {
   return (
     
     <div className='relative'>
-        <div className="embla mt-12 mx-10" ref={emblaRef}>
+        <div className="embla mb-0 mt-10 mx-10" ref={emblaRef}>
           <div className="relative embla__container h-auto  ">
           {news.data.map((article) => (
           <CarouselItem key={article.title} article={article} />
