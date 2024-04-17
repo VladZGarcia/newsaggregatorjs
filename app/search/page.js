@@ -3,6 +3,8 @@ import NewsList from "../NewsList";
 import { categories } from '@/constants'
 import sortNewsByImage from '@/lib/sortNewsByImage'
 import response from '@/response.json'
+import Carousel from '../Carousel'
+import MasonryGrid from '../MasonryGrid'
 
 async function SearchPage({searchParams}) {
     const news = await fetchNews(
@@ -18,6 +20,8 @@ async function SearchPage({searchParams}) {
     <div>
         <h1 className="headerTitle">Search Results for: 
         {searchParams?.term}</h1>
+        <Carousel news= {news}/>
+        <MasonryGrid news= {news}/>
         <NewsList news={news} />
     </div>
   )

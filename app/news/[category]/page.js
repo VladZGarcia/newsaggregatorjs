@@ -4,6 +4,7 @@ import { categories } from '@/constants'
 import sortNewsByImage from '@/lib/sortNewsByImage'
 import response from '@/response.json'
 import Carousel from '@/app/Carousel';
+import MasonryGrid from '@/app/MasonryGrid'
 
 
 async function NewsCategory(props) {
@@ -18,7 +19,8 @@ async function NewsCategory(props) {
   return (
     <div> 
         <h1 className="headerTitle">{category}</h1>
-        <Carousel news= {news}/>
+        <Carousel news={news} />
+        <MasonryGrid news= {news}/>
         <NewsList news={news} />
     </div>
   );
