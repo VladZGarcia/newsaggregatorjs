@@ -5,6 +5,7 @@ import NewsList from './NewsList'
 import response from '../response.json'
 import sortNewsByImage from '@/lib/sortNewsByImage'
 import Carousel from './Carousel'
+import MasonryGrid from './MasonryGrid'
 
 async function Homepage() {
   // fetch the news data
@@ -20,7 +21,9 @@ async function Homepage() {
   return (
     <div> 
       <Carousel news= {news}/>
+      <MasonryGrid news= {news}/>
       <NewsList news= {news}/>
+      
     </div>
   )
 }

@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className="bg-gray-100 dark:bg-zinc-900 transition-all duration-700">
         <Providers>
           <Header />
-            <div className="max-w-6xl mx-auto">{children}</div>
+            <div className="max-w-7xl mx-auto">{children}</div>
         </Providers>
       </body> 
     </html>
