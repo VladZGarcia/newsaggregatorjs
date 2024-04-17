@@ -15,7 +15,7 @@ function MasonryGrid ({news}) {
 
   return (
     <div className="container mx-auto px-10 py-2  lg:pt-24 flex items-center">
-      <div className="-m-1 flex flex-row sm:flex-wrap md:-m-2">
+      <div className="-m-1 flex flex-col sm:flex-row lg:flex-wrap md:-m-2">
         <div className="flex w-full sm:w-1/2 flex-wrap lg:flex-row flex-row-reverse">
           <a href={article1.url} className="w-full lg:w-1/2 p-1 md:p-2">
           <article className="relative bg-slate-100 dark:bg-slate-800 flex flex-col rounded-lg shadow-lg hover:scale-105 hover:shadow-xl hover:bg-slate-200 transition-all duration-200 ease-out items-center justify-center h-full">
@@ -67,7 +67,7 @@ function MasonryGrid ({news}) {
               />
           </article>
           </a>
-          <a href={article5.url} className="w-1/2 p-1 md:p-2">
+          <a href={article5.url} className="lg:w-1/2 p-1 md:p-2">
           <article className="relative bg-slate-100 dark:bg-slate-800 flex flex-col rounded-lg shadow-lg hover:scale-105 hover:shadow-xl hover:bg-slate-200 transition-all duration-200 ease-out items-center justify-center h-full">
             <h2 className="absolute bottom-0 left-0 right-0 text-center font-bold text-white bg-black bg-gradient-to-t from-black bg-opacity-5 px-4 py-2 rounded-t-lg font-serif">
               {article5.title}
@@ -79,7 +79,7 @@ function MasonryGrid ({news}) {
               />
           </article>
           </a>
-          <a href={article6.url} className="w-1/2 p-1 md:p-2">
+          <a href={article6.url} className="lg:w-1/2 p-1 md:p-2">
           <article className="relative bg-slate-100 dark:bg-slate-800 flex flex-col rounded-lg shadow-lg hover:scale-105 hover:shadow-xl hover:bg-slate-200 transition-all duration-200 ease-out items-center justify-center h-full">
             <h2 className="absolute bottom-0 left-0 right-0 text-center font-bold text-white bg-black bg-gradient-to-t from-black bg-opacity-5 px-4 py-2 rounded-t-lg font-serif">
               {article6.title}
