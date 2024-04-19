@@ -72,10 +72,10 @@ useEffect(() => {
         {isMenuOpen || isMediumScreen ? (
           <>
           <NavLinks />
-          <SearchBox />
+          
           </>
         ) : null}
-        
+        <SearchBox />
     </header>
   );
 }
