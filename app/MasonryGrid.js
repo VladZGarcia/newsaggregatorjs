@@ -18,13 +18,13 @@ function MasonryGrid ({news}) {
       <div className="-m-1 flex flex-col sm:flex-row lg:flex-wrap md:-m-2">
         <div className="flex w-full sm:w-1/2 flex-wrap lg:flex-row flex-row-reverse">
           <a href={article1.url} className="w-full lg:w-1/2 p-1 md:p-2">
-          <article className="relative bg-slate-100 dark:bg-slate-800 flex flex-col rounded-lg shadow-lg hover:scale-105 hover:shadow-xl hover:bg-slate-200 transition-all duration-200 ease-out items-center justify-center h-full">
+          <article className="relative bg-slate-100 dark:bg-slate-800 flex flex-col  shadow-lg hover:scale-105 hover:shadow-xl hover:bg-slate-200 transition-all duration-200 ease-out items-center justify-center h-full">
             <h2 className="absolute bottom-0 left-0 right-0 text-center font-bold text-white bg-black bg-gradient-to-t from-black bg-opacity-5 px-4 py-2 rounded-t-lg font-serif">
               {article1.title}
             </h2>
               <img
               alt="gallery"
-              className="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center"
+              className="block h-full w-full  object-cover object-center"
               src={article1.image}
               />
           </article>
@@ -36,7 +36,7 @@ function MasonryGrid ({news}) {
             </h2>
               <img
               alt="gallery"
-              className="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center"
+              className="block h-full w-full  object-cover object-center"
               src={article2.image}
               />
           </article>
@@ -48,7 +48,7 @@ function MasonryGrid ({news}) {
             </h2>
             <img
               alt="gallery"
-              className="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center max-h-none lg:max-h-[1000px]"
+              className="block h-full w-full  object-cover object-center max-h-none lg:max-h-[1000px]"
               src={article3.image}
               />
           </article>
@@ -62,7 +62,7 @@ function MasonryGrid ({news}) {
             </h2>
             <img
               alt="gallery"
-              className="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center"
+              className="block h-full w-full object-cover object-center"
               src={article4.image}
               />
           </article>
@@ -74,7 +74,7 @@ function MasonryGrid ({news}) {
             </h2>
             <img
               alt="gallery"
-              className="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center"
+              className="block h-full w-full  object-cover object-center"
               src={article5.image}
               />
           </article>
@@ -86,7 +86,7 @@ function MasonryGrid ({news}) {
             </h2>
             <img
               alt="gallery"
-              className="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center"
+              className="block h-full w-full  object-cover object-center"
               src={article6.image}
               />
           </article>
