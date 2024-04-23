@@ -21,7 +21,7 @@ const startIndex = 6;
   return (
     
     <div className='relative'>
-        <div className="embla mb-0 mt-10 mx-10" ref={emblaRef}>
+        <div className="embla mb-0 mt-5 mx-10" ref={emblaRef}>
           <div className="relative embla__container h-auto  ">
           {news.data.slice(startIndex).map((article) => (
           <CarouselItem key={article.title} article={article} />

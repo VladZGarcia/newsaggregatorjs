@@ -20,7 +20,7 @@ function MasonryGrid ({news}) {
   }
 
   return (
-    <div className="container mx-auto px-10 py-2  lg:pt-24 flex items-center">
+    <div className="container mx-auto px-10 py-5  lg:pt-10 flex items-center">
       <div className="-m-1 flex flex-col sm:flex-row lg:flex-wrap md:-m-2">
         <div className="flex w-full sm:w-1/2 flex-wrap lg:flex-row flex-row-reverse">
           <div className="w-full lg:w-1/2 p-1 md:p-2" onClick={() => handleClick(article1)}>
