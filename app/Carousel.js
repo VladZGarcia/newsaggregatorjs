@@ -6,7 +6,8 @@ import Article from './Article'
 import CarouselItem from './CarouselItem'
 import Autoscroll from 'embla-carousel-auto-scroll'
 
-function Carousel({news}) {
+function Carousel({ news }) {
+  
 const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true,loop: true}, [Autoscroll({ speed: 0.5, stopOnMouseEnter: false, stopOnInteraction: false, startDelay: 50 })])
 
 useEffect(() => {
