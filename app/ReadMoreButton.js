@@ -6,13 +6,9 @@ const { useRouter } = require("next/navigation");
 
 function ReadMoreButton({article}){
     const router = useRouter();
-
     const querystring = require('querystring');
 
     const handleClick = () => {
-        // const queryString = Object.entries(article)
-        //     .map(([key, value])=> `${key}=${value}`)
-        //     .join("&");
         const queryString = querystring.stringify(article);
         console.log(queryString)
         const url = `/article?${queryString}`;

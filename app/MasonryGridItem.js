@@ -28,7 +28,8 @@ function Article({ article }) {
                 {/* <p>
                 <LiveTimestamp time={article.published_at}/>
                 </p> */}
-              </footer>
+            </footer>
+            
           </div>
         </div>
       </article>

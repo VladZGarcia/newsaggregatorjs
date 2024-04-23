@@ -55,7 +55,7 @@ useEffect(() => {
             
             <Link href='/'>
               <div className=" justify-end">
-                <h1 className="font-serif text-4xl text-center">El{" "}
+                <h1 className="font-serif text-4xl text-center">
                   <span className="underline decoration-6 decoration-orange-400">
                     Mensajero
                   </span>
@@ -70,8 +70,11 @@ useEffect(() => {
             </div>
         </div>
         {isMenuOpen || isMediumScreen ? (
-          <>
+        <>
           <NavLinks />
+          <div className='header-menu'>
+            
+          </div>
           
           </>
         ) : null}
