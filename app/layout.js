@@ -8,8 +8,20 @@ SideBar
 //const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "El Mensajero",
-  description: "News from LatinAmerica",
+  title: "Mensajero",
+  description: "Camino directo a la información global",
+  icons: {
+    icon: [
+      {
+        media: '(prefers-color-scheme: light)',
+        url: '/mensajero-favicon-black.png',
+      },
+      {
+        media: '(prefers-color-scheme: dark)',
+        url: '/mensajero-favicon-white.png',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
