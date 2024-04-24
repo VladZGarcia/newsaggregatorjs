@@ -43,7 +43,7 @@ useEffect(() => {
 }, [isMenuOpen]);
 
   return (
-    <header className={`z-10 bg-gray-100 dark:bg-zinc-900 shadow-sm ${!isMediumScreen ? 'sticky top-0' : ''}`}>
+    <header className={`z-10 max-w-8xl bg-gray-100 dark:bg-zinc-900 shadow-sm ${!isMediumScreen ? 'sticky top-0' : ''}`}>
         <div className=" grid grid-cols-3  p-10 items-center">
         <div>
         {isMenuOpen ? (
