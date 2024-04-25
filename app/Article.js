@@ -1,6 +1,6 @@
 import React from 'react';
-import ReadMoreButton from './ReadMoreButton';
-import LiveTimestamp from './LiveTimestamp';
+import ReadMoreButton from '../components/ReadMoreButton';
+import LiveTimestamp from '../components/LiveTimestamp';
 
 function Article({ article }) {
   if (!article.image) {

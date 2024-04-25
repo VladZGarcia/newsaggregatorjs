@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
-import SearchBox from "./SearchBox";
-import DarkModeButton from "./DarkModeButton";
+import SearchBox from "../components/SearchBox";
+import DarkModeButton from "../components/DarkModeButton";
 import SideBar from "./SideBar";
 
 function Header() {

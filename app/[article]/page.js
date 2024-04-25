@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import React from 'react'
-import LiveTimestamp from '../LiveTimestamp';
+import LiveTimestamp from '../../components/LiveTimestamp';
 
 function ArticlePage({ searchParams }) {
     if (
