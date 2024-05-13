@@ -1,8 +1,12 @@
+
 import { notFound } from 'next/navigation'
-import React from 'react'
+import React from 'react';
 import LiveTimestamp from '../../components/LiveTimestamp';
+import SentimentAnalysis from '@/lib/SentimentAnalysis';
+
 
 function ArticlePage({ searchParams }) {
+
     if (
         (searchParams && Object.entries(searchParams).length === 0) || !searchParams
     ) {
@@ -10,6 +14,10 @@ function ArticlePage({ searchParams }) {
     }
 
     const article = searchParams;
+
+  
+  
+      
 
   return (
     <a href={article.url} className="block">
@@ -28,14 +36,14 @@ function ArticlePage({ searchParams }) {
                 </h1>
 
                 <div className="flex divide-x-2 space-x-4">
-                    <h2 className="font-bold">By: {article.author}</h2>
-                    <h2 className="font-bold pl-4">Source: {article.source}</h2>
-                    <p> <LiveTimestamp time={article.published_at}/></p>
+                    <h2 className="font-bold">Autor: {article.author}</h2>
+                    <h2 className="font-bold pl-4">Fuente: {article.source}</h2>
+                    <p> <LiveTimestamp time={article.published_at} /></p>
                 </div>
-
                 <p className="pt-4">{article.description}</p>
             </div>
-        </section>
+              </section>
+              <h2 className="font-bold pl-4"><SentimentAnalysis articleTitle={article.title} articleText={article.description}/></h2>
     
     </article>
     </a>
