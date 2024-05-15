@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import LiveTimestamp from './LiveTimestamp';
+import LiveTimestamp from '../components/LiveTimestamp';
 
 const { useRouter } = require("next/navigation");
 
