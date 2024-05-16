@@ -13,16 +13,21 @@ async function SearchPage({searchParams}) {
         true
     );
     
-    //to not use up the api use the response.json
-    //const news = sortNewsByImage(response)
-//console.log(news)
+    
+  console.log('news',news.length)
   return (
     <div>
         <h1 className="headerTitle">Search Results for: 
         {searchParams?.term}</h1>
-        <Carousel news= {news}/>
-        <MasonryGrid news= {news}/>
-        <NewsList news={news} />
+        {news === null ? (
+                <>
+                    <Carousel news={news} />
+                    <MasonryGrid news={news} />
+                    <NewsList news={news} />
+                </>
+            ) : (
+                <p className="text-red-500 text-center mt-4 p-20">No search results found. Try different keywords</p>
+            )}
     </div>
   )
 }
