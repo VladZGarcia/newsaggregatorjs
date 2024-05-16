@@ -14,7 +14,8 @@ async function NewsCategory(props) {
     const news = await fetchNews(categories.join(','), category, true);
 
     //to not use up the api use the response.json
-    //const news = sortNewsByImage(response)
+  //const news = sortNewsByImage(response)
+    
 
   return (
     <div> 

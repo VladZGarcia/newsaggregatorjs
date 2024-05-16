@@ -14,8 +14,7 @@ function ArticlePage({ searchParams }) {
     }
 
     const article = searchParams;
-
-  
+    const prompt = 'Är artikeln Objektiv eller subjektiv, positiv eller negativ, vänster, mitten eller höger: '; 
   
       
 
@@ -44,7 +43,7 @@ function ArticlePage({ searchParams }) {
                   </div>
                   
               </section>
-              <h2 className='relative z-1 flex items-center h-full mb-5 p-8 border  rounded-3xl overflow-hidden  '><SentimentAnalysis articleTitle={article.title} articleText={article.description}/></h2>
+              <h2 className='relative z-1 flex items-center h-full mb-5 p-8 border  rounded-3xl overflow-hidden list-disc '><SentimentAnalysis articleTitle={article.title} articleText={article.description} prompt ={prompt}/></h2>
     
     </article>
     </a>
