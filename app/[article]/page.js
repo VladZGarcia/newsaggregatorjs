@@ -22,7 +22,7 @@ function ArticlePage({ searchParams }) {
   return (
     <a href={article.url} className="block">
     <article>
-        <section className="flex flex-col lg:flex-row pb-24 px-0 lg:px-10">
+        <section className="flex flex-col  pb-10 px-0 lg:px-10">
             {article.image && (
                 <img className="h-50 max-w-md mx-auto md:max-w-lg lg:max-w-xl object-cover rounded-lg shadow-md"
                 src={article.image}
@@ -40,10 +40,11 @@ function ArticlePage({ searchParams }) {
                     <h2 className="font-bold pl-4">Fuente: {article.source}</h2>
                     <p> <LiveTimestamp time={article.published_at} /></p>
                 </div>
-                <p className="pt-4">{article.description}</p>
-            </div>
+                <p className="py-4">{article.description}</p>
+                  </div>
+                  
               </section>
-              <h2 className="font-bold pl-4"><SentimentAnalysis articleTitle={article.title} articleText={article.description}/></h2>
+              <h2 className='relative z-1 flex items-center h-full mb-5 p-8 border  rounded-3xl overflow-hidden  '><SentimentAnalysis articleTitle={article.title} articleText={article.description}/></h2>
     
     </article>
     </a>
