@@ -7,7 +7,7 @@ import Carousel from '../Carousel';
 import MasonryGrid from '../MasonryGrid';
 
 async function SearchPage({ searchParams }) {
-    let news = [];
+    let news = { data: [] };
 
     try {
         news = await fetchNews(
@@ -15,7 +15,6 @@ async function SearchPage({ searchParams }) {
             searchParams?.term,
             true
         );
-        console.log('Fetched news:', news);
     } catch (error) {
         console.error('Error fetching news:', error);
     }
