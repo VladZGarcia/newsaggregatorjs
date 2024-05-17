@@ -7,7 +7,7 @@ import Carousel from '../Carousel';
 import MasonryGrid from '../MasonryGrid';
 
 async function SearchPage({ searchParams }) {
-    let news = [];
+    let news = { data: [] };
 
     try {
         news = await fetchNews(
@@ -15,20 +15,19 @@ async function SearchPage({ searchParams }) {
             searchParams?.term,
             true
         );
-        console.log('Fetched news:', news);
     } catch (error) {
         console.error('Error fetching news:', error);
     }
 
-    console.log('News length:', news.length);
+    console.log('News length: ', news.data.length);
 
     return (
         <div>
             <h1 className="headerTitle">Search Results for: {searchParams?.term}</h1>
-            {news.data ? (
+            {news.data.length > 0 ? (
                 <>
                     <Carousel news={news} />
-                    <MasonryGrid news={news} />
+                    {/* <MasonryGrid news={news} /> */}
                     <NewsList news={news} />
                 </>
             ) : (

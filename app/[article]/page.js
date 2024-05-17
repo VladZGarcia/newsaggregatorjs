@@ -14,7 +14,7 @@ function ArticlePage({ searchParams }) {
     }
 
     const article = searchParams;
-    const prompt = 'Är artikeln Objektiv eller subjektiv, positiv eller negativ, vänster, mitten eller höger: '; 
+    const prompt = 'el articulo es objetivo o subjetivo, posivitivo o negativo ,isquierda o derecha o centro: '; 
 
   return (
     <a href={article.url} className="block">
