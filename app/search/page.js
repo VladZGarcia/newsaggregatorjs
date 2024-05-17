@@ -28,7 +28,7 @@ async function SearchPage({ searchParams }) {
             {news.data.length > 0 ? (
                 <>
                     <Carousel news={news} />
-                    <MasonryGrid news={news} />
+                    {/* <MasonryGrid news={news} /> */}
                     <NewsList news={news} />
                 </>
             ) : (
