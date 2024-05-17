@@ -20,12 +20,12 @@ async function SearchPage({ searchParams }) {
         console.error('Error fetching news:', error);
     }
 
-    console.log('News length:', news.length);
+    console.log('News length: ', news.data.length);
 
     return (
         <div>
             <h1 className="headerTitle">Search Results for: {searchParams?.term}</h1>
-            {news.data ? (
+            {news.data.length > 0 ? (
                 <>
                     <Carousel news={news} />
                     <MasonryGrid news={news} />
