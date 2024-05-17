@@ -15,8 +15,6 @@ function ArticlePage({ searchParams }) {
 
     const article = searchParams;
     const prompt = 'Är artikeln Objektiv eller subjektiv, positiv eller negativ, vänster, mitten eller höger: '; 
-  
-      
 
   return (
     <a href={article.url} className="block">
@@ -37,7 +35,7 @@ function ArticlePage({ searchParams }) {
                 <div className="flex divide-x-2 space-x-4">
                     <h2 className="font-bold">Autor: {article.author}</h2>
                     <h2 className="font-bold pl-4">Fuente: {article.source}</h2>
-                    <p> <LiveTimestamp time={article.published_at} /></p>
+                    {/* <p> <LiveTimestamp time={article.published_at} /></p> */}
                 </div>
                 <p className="py-4">{article.description}</p>
                   </div>
