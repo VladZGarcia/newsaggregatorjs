@@ -5,9 +5,13 @@ import React from "react";
 const { useRouter } = require("next/navigation");
 
 
-function MasonryGrid ({news}) {
-    //const shuffledArticles = shuffleArray(news.data);
-  const [article1, article2, article3, article4, article5, article6] = news.data.slice(0, 6);
+function MasonryGrid({ news }) {
+  console.log(news.data.length)
+  //const shuffledArticles = shuffleArray(news.data);
+  
+    const [article1, article2, article3, article4, article5, article6] = news.data.slice(0, 6);
+    
+  
   
   const router = useRouter();
   const querystring = require('querystring');
