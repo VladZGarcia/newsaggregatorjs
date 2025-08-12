@@ -6,13 +6,13 @@ const { useRouter } = require("next/navigation");
 
 
 function MasonryGrid({ news }) {
-  console.log(news.data.length)
-  //const shuffledArticles = shuffleArray(news.data);
-  
-    const [article1, article2, article3, article4, article5, article6] = news.data.slice(0, 6);
-    
-  
-  
+  // Only use articles with images
+  const articlesWithImages = news.data.filter(article => !!article.image);
+  if (articlesWithImages.length < 6) {
+    return null;
+  }
+  const [article1, article2, article3, article4, article5, article6] = articlesWithImages.slice(0, 6);
+
   const router = useRouter();
   const querystring = require('querystring');
   const handleClick = (article) => {
@@ -104,6 +104,6 @@ function MasonryGrid({ news }) {
         </div>
       </div>
     </div>
-       );
- };
- export default MasonryGrid;
+  );
+};
+export default MasonryGrid;

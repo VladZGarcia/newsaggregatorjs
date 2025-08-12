@@ -1,19 +1,32 @@
-
+'use client'
 import { notFound } from 'next/navigation'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import LiveTimestamp from '../../components/LiveTimestamp';
 import SentimentAnalysis from '@/lib/SentimentAnalysis';
+import { set } from 'cohere-ai/core/schemas';
 
 
 function ArticlePage({ searchParams }) {
+    const [article, setArticle] = useState(null);
 
-    if (
-        (searchParams && Object.entries(searchParams).length === 0) || !searchParams
-    ) {
-        return notFound();
+    useEffect(() => {
+        async function fetchArticle() {
+            const params = await searchParams;
+            if (params && Object.entries(params).length > 0) {
+            setArticle(params);
+        } else {
+            notFound();
+            }
+        }
+        fetchArticle();
+    }, [searchParams]);
+
+    if (!article) {
+        return <div>Loading...</div>;
     }
 
-    const article = searchParams;
+
+    
     const prompt = 'el articulo es objetivo o subjetivo, posivitivo o negativo ,isquierda o derecha o centro: '; 
 
   return (
@@ -41,7 +54,9 @@ function ArticlePage({ searchParams }) {
                   </div>
                   
               </section>
-              <h2 className='relative z-1 flex items-center h-full mb-5 p-8 border  rounded-3xl overflow-hidden list-disc '><SentimentAnalysis articleTitle={article.title} articleText={article.description} prompt ={prompt}/></h2>
+              <h2 className='relative z-1 flex items-center h-full mb-5 p-8 border  rounded-3xl overflow-hidden list-disc '>
+                  <SentimentAnalysis articleTitle={article.title} articleText={article.description} prompt={prompt} />
+              </h2>
     
     </article>
     </a>
