@@ -7,26 +7,28 @@ import sortNewsByImage from '@/lib/sortNewsByImage';
 import Carousel from '../Carousel';
 import MasonryGrid from '../MasonryGrid';
 import getUserLanguageAndCountry from '@/lib/getUserLanguageAndCountry';
-import App from 'next/app';
+
 
 async function SearchPage({ searchParams }) {
     let news = { data: [] };
     const params = await searchParams;
 
+
     try {
-        // Optionally, get user language and country if needed
+        // Get user language and country (server-side: defaults)
+        const { language, country } = getUserLanguageAndCountry();
         news = await fetchNews(
             categories.join(','),
             params?.term,
             true,
-            es,
-            ar
+            language,
+            country
         );
     } catch (error) {
         console.error('Error fetching news:', error);
     }
 
-    console.log('News length: ', news.data.length);
+    /* console.log('News length: ', news.data.length); */
 
     return (
         <div>
@@ -34,7 +36,7 @@ async function SearchPage({ searchParams }) {
             {news.data.length > 0 ? (
                 <>
                     <Carousel news={news} />
-                    {/* <MasonryGrid news={news} /> */}
+                    {<MasonryGrid news={news} />}
                     <NewsList news={news} />
                 </>
             ) : (
